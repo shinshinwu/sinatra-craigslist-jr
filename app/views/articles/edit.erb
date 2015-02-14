@@ -1,0 +1,27 @@
+<h3>Edit Article</h3>
+
+<form action="/categories/<%= @category.id %>/articles/<%= @article.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="title">Title:</label>
+  <input type="text" name="article[title]" value="<%= @article.title %>" />
+  <br>
+  <br>
+  <label for="price">Price:</label>
+  <input type="integer" name="article[price]" value="<%= @article.price %>" />
+  <br>
+  <br>
+  <label for="location">Location:</label>
+  <input type="text" name="article[location]" value="<%= @article.location %>" />
+  <br>
+  <br>
+  <label for="email">Email:</label>
+  <input type="text" name="article[email]" value="<%= @article.email %>" />
+  <br>
+  <br>
+  <label for="content">Content:</label>
+  <input type="text" name="article[content]" value="<%= @article.content %>" />
+  <br>
+  <br>
+  <br>
+  <input type="submit" value="Update Article">
+</form>

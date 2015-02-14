@@ -1,0 +1,8 @@
+<ul>
+  <% @articles.each do |article| %>
+  <li><a href="/categories/<%= @category.id %>/articles/<%= article.id %>"><%= article.title %></a> Created at: <%= article.created_at %>
+  </li>
+  <% end %>
+</ul>
+
+<h3>Have something to sell? Post your article <a href="/categories/<%= @articles.first.category_id %>/articles/new">HERE</a>!<h3>
